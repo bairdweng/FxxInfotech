@@ -6,7 +6,7 @@
                     <div slot="header" class="clearfix">
                         <span>电话</span>
                     </div>
-                    <li style="color: gray">
+                    <li style="color: gray" class="card-content">
                          翁：13660641950
                     </li>
                     <br/>
