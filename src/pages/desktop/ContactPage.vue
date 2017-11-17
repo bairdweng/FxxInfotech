@@ -7,7 +7,7 @@
                         <span>电话</span>
                     </div>
                     <li style="color: gray" class="card-content">
-                         翁：13660641950
+                        翁：13660641950
                     </li>
                     <br/>
                     <br/>
@@ -34,8 +34,7 @@
                         fxxinfotech@xggserve.com
                     </li>
                     <br/>
-                    <li style="color: gray" class="card-content">
-                        广州市南沙区丰泽东路106号（自编1号楼）X301-F2010
+                    <li style="color: gray" class="card-content">广州市南沙区丰泽东路106号（自编1号楼）X1301-F2010
                     </li>
                 </el-card>
             </el-col>

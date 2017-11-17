@@ -1,24 +1,31 @@
 <template>
     <div>
-        <FYHeader></FYHeader>
         <router-view></router-view>
-        <FYFooter></FYFooter>
     </div>
 </template>
 <script>
-    import FYHeader from './components/Header/Header.vue'
-    import FYFooter from './components/Footer/Footer.vue'
     export default {
-        components: {FYHeader, FYFooter},
+        beforeRouteEnter (to, from, next) {
+            next(vm => {
+                vm.reloadRouter();
+            });
+        },
         data(){
             return {}
         },
-        methods: {
-            handleSelect(key, keyPath) {
-                console.log(key, keyPath);
-            }
+        mounted(){
+            this.reloadRouter();
         },
-        computed: {}
+        methods: {
+            reloadRouter(){
+                if (navigator.platform.indexOf('Mac') !== -1 || navigator.platform.indexOf('Win') !== -1) {
+                    this.$router.replace({name: 'dkindex'});
+                }
+                else {
+                    this.$router.replace({name: 'mbindex'});
+                }
+            }
+        }
     }
 </script>
 

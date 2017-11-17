@@ -7,10 +7,17 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 const App = resolve => require(['../App'], resolve)
-const MianIndex = resolve => require(['../pages/MainIndex'], resolve)
-const ProductCenter = resolve => require(['../pages/ProductCenter'], resolve)
-const ContactPage = resolve => require(['../pages/ContactPage'], resolve)
 
+
+const MbApp = resolve => require(['../pages/mobile/MbApp.vue'], resolve)
+const MBMianIndex = resolve => require(['../pages/mobile/MBMainIndex.vue'], resolve)
+const MBProductCenter = resolve => require(['../pages/mobile/MBProductCenter.vue'], resolve)
+const MBContactPage = resolve => require(['../pages/mobile/MBContactPage.vue'], resolve)
+
+const DesktopApp = resolve => require(['../pages/desktop/DesktopApp.vue'], resolve)
+const MianIndex = resolve => require(['../pages/desktop/MainIndex.vue'], resolve)
+const ProductCenter = resolve => require(['../pages/desktop/ProductCenter.vue'], resolve)
+const ContactPage = resolve => require(['../pages/desktop/ContactPage.vue'], resolve)
 //路由配置
 /**
  * meta 配置
@@ -27,11 +34,30 @@ const routes = [
         meta: {keepAlive: true},
         name: 'App',
         children: [
-            {path: '', component: MianIndex, meta: {keepAlive: true}, name: 'index'},
-            {path: 'productcenter', component: ProductCenter, meta: {keepAlive: true}, name: 'productCenter'},
-            {path: 'contactpage', component: ContactPage, meta: {keepAlive: true}, name: 'contactPage'},
+            {
+                path: 'desktop',
+                component: DesktopApp,
+                meta: {keepAlive: true},
+                name: 'DesktopApp',
+                children: [
+                    {path: '/index', component: MianIndex, meta: {keepAlive: true}, name: 'dkindex'},
+                    {path: 'productcenter', component: ProductCenter, meta: {keepAlive: true}, name: 'productCenter'},
+                    {path: 'contactpage', component: ContactPage, meta: {keepAlive: true}, name: 'contactPage'}
+                ]
+            },
+            {
+                path: 'mobile',
+                component: MbApp,
+                meta: {keepAlive: true},
+                name: 'MbApp',
+                children: [
+                    {path: 'index', component: MBMianIndex, meta: {keepAlive: true}, name: 'mbindex'},
+                    {path: 'productcenter',component: MBProductCenter,meta: {keepAlive: true}, name: 'mbproductCenter'},
+                    {path: 'contactpage', component: MBContactPage, meta: {keepAlive: true}, name: 'mbcontactPage'}
+                ]
+            },
         ]
-    },
+    }
 ];
 const router = new VueRouter({
     routes

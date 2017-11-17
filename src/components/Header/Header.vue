@@ -10,7 +10,15 @@
             <el-menu-item index="3">联系方式</el-menu-item>
             <el-menu-item index="2">产品中心</el-menu-item>
             <el-menu-item index="1">首页</el-menu-item>
-            <div style="padding-left: 15px;position: absolute;line-height:60px;height: 60px;font-size: 2rem;color: white">萧萧科技</div>
+            <div style="padding-left: 15px;position: absolute;"><a
+                    style="text-decoration: none;
+                    font-size: 1.8rem;
+                    color: white;
+                    line-height:60px;
+                    height: 60px;"
+                    href="https://www.xggserve.com">
+                萧萧科技
+            </a></div>
         </el-menu>
     </div>
 </template>
@@ -25,7 +33,7 @@
             handleSelect(index) {
                 switch (index) {
                     case '1':
-                        this.$router.push({name: 'index'});
+                        this.$router.push({name: 'dkindex'});
                         break;
                     case '2':
                         this.$router.push({name: 'productCenter'});

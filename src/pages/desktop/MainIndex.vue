@@ -1,26 +1,26 @@
 <template>
     <div class="mainIndex">
-        <el-row style="padding-top: 50px;padding-bottom: 100px;background-color: rgba(0,170,255,1)">
+        <el-row style="padding-top: 50px;padding-bottom: 70px;background-color: rgba(0,170,255,1);">
             <el-col :span="8">
-                <div style="text-align: center;padding: 3px">
-                    <img style="width: 100%;height: 25vw" :src="xiaoguo1">
+                <div style="text-align: center;padding: 10px">
+                    <img class="imageStyle" :src="xiaoguo1">
                 </div>
             </el-col>
             <el-col :span="8">
-                <div style="text-align: center;padding: 3px">
-                    <img style="width: 100%;height: 25vw" :src="xiaoguo2">
+                <div style="text-align: center;padding: 10px">
+                    <img class="imageStyle" :src="xiaoguo2">
                 </div>
             </el-col>
             <el-col :span="8">
-                <div style="text-align: center;padding: 3px">
-                    <img style="width: 100%;height: 25vw" :src="xiaoguo3">
+                <div style="text-align: center;padding: 10px">
+                    <img class="imageStyle" :src="xiaoguo3">
                 </div>
             </el-col>
         </el-row>
 
         <el-row>
             <el-col :span="8">
-                <el-card style="margin: 15px">
+                <el-card class="cardStyle">
                     <div slot="header" class="clearfix">
                         <span>萧萧科技简介</span>
                     </div>
@@ -30,7 +30,7 @@
                 </el-card>
             </el-col>
             <el-col :span="8">
-                <el-card style="margin: 15px">
+                <el-card class="cardStyle">
                     <div slot="header" class="clearfix">
                         <span>公司愿景</span>
                     </div>
@@ -39,7 +39,7 @@
                 </el-card>
             </el-col>
             <el-col :span="8">
-                <el-card style="margin: 15px">
+                <el-card class="cardStyle">
                     <div slot="header" class="clearfix">
                         <span>管理理念</span>
                     </div>
@@ -60,19 +60,33 @@
     </div>
 </template>
 <style>
+    .mainIndex .imageStyle {
+        width: 100%;
+        height: 25vw;
+        border-radius: 5px;
+        border-color: rgba(169, 169, 169, 0.47);
+        box-shadow: 1px 1px 10px #ffffff;
+    }
+
     .card-content {
         color: gray;
         font-size: 14px;
     }
-    .el-menu--horizontal{
-        border:none;
+
+    .el-menu--horizontal {
+        border: none;
+    }
+
+    .mainIndex .cardStyle {
+        height: 250px;
+        margin: 15px;
     }
 
 </style>
 <script>
-    import xiaoguo1 from '../assets/images/xiaoguo3.jpg'
-    import xiaoguo2 from '../assets/images/xiaoguo2.jpg'
-    import xiaoguo3 from '../assets/images/xiaoguo1.jpg'
+    import xiaoguo1 from '../../assets/images/xiaoguo3.jpg'
+    import xiaoguo2 from '../../assets/images/xiaoguo2.jpg'
+    import xiaoguo3 from '../../assets/images/xiaoguo1.jpg'
 
     export default{
         data(){

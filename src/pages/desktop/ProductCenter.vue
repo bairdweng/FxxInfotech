@@ -1,28 +1,28 @@
 <template>
-    <div>
+    <div class="productcenter">
         <el-row>
             <el-col :span="8">
-                <el-card style="margin: 15px">
+                <el-card class="cardStyle">
                     <div slot="header" class="clearfix">
                         <span>萧萧预约小程序</span>
                     </div>
                     <div align="center">
-                        <img :src="icon1" width="50%">
+                        <img :src="icon1" width="200px" height="200px">
                     </div>
                 </el-card>
             </el-col>
             <el-col :span="8">
-                <el-card style="margin: 15px">
+                <el-card class="cardStyle">
                     <div slot="header" class="clearfix">
                         <span>萧萧科技微信公众号</span>
                     </div>
                     <div align="center">
-                        <img :src="icon2" width="50%">
+                        <img :src="icon2" width="200px" height="200px">
                     </div>
                 </el-card>
             </el-col>
             <el-col :span="8">
-                <el-card style="margin: 15px;height: 308px">
+                <el-card class="cardStyle">
                     <div slot="header" class="clearfix">
                         <span>主营业务</span>
                     </div>
@@ -39,11 +39,11 @@
                     </li>
                     <br/>
                     <li style="color: gray">
-                        游戏马甲制作。
+                        H5游戏/手游开发。
                     </li>
                     <br/>
                     <li style="color: gray">
-                        提供互联网相关产品的技术咨询，技术支持。
+                        提供互联网周边产品的技术支持。
                     </li>
                 </el-card>
             </el-col>
@@ -52,10 +52,14 @@
     </div>
 </template>
 <style>
+    .productcenter .cardStyle {
+        height: 320px;
+        margin: 15px;
+    }
 </style>
 <script>
-    import icon1 from '../assets/images/xxyy.jpg'
-    import icon2 from '../assets/images/xiaoxiaogongzhonghao.jpg'
+    import icon1 from '../../assets/images/xxyy.jpg'
+    import icon2 from '../../assets/images/xiaoxiaogongzhonghao.jpg'
     export default{
         data(){
             return {

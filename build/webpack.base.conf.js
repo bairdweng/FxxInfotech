@@ -1,9 +1,9 @@
-var path = require('path')
-var utils = require('./utils')
-var config = require('../config')
-var merge = require('webpack-merge')
+var path = require('path');
+var utils = require('./utils');
+var config = require('../config');
+var merge = require('webpack-merge');
 var HappyPack = require('happypack');
-var _vueLoaderConfig = require('./vue-loader.conf')
+var _vueLoaderConfig = require('./vue-loader.conf');
 const os = require('os');
 var happyThreadPool = HappyPack.ThreadPool({
     size: os.cpus().length
@@ -18,7 +18,7 @@ var vueLoaderConfig = merge(_vueLoaderConfig, {
         less: 'vue-style-loader!happypack/loader?id=css!happypack/loader?id=less'
     }
 });
-module.exports = {
+const webpackConfig = {
     entry: {
         app: './src/main.js'
     },
@@ -105,4 +105,11 @@ module.exports = {
             loaders: ['less-loader']
         })
     ]
-}
+};
+const vuxLoader = require('vux-loader')
+module.exports = vuxLoader.merge(webpackConfig, {
+    options: {},
+    plugins: [{
+        name: 'vux-ui'
+    }]
+});
