@@ -1,6 +1,7 @@
 <template>
     <div class="mainIndex">
-        <el-row style="padding-top: 50px;padding-bottom: 70px;background-color: rgba(0,170,255,1);">
+        <el-row style="padding-top: 50px;padding-bottom: 70px;padding-left: 20px;padding-right: 20px;background-color: rgba(0,170,255,1);"
+                :style="note">
             <el-col :span="8">
                 <div style="text-align: center;padding: 10px">
                     <img class="imageStyle" :src="xiaoguo1">
@@ -64,8 +65,7 @@
         width: 100%;
         height: 25vw;
         border-radius: 5px;
-        border-color: rgba(169, 169, 169, 0.47);
-        box-shadow: 1px 1px 10px #ffffff;
+        box-shadow: 1px 1px 5px #ffffff;
     }
 
     .card-content {
@@ -91,6 +91,9 @@
     export default{
         data(){
             return {
+                note: {
+                    backgroundImage: "url(" + require("../../assets/images/fxxbackgroundImage.jpg") + ")"
+                },
                 xiaoguo1: xiaoguo1,
                 xiaoguo2: xiaoguo2,
                 xiaoguo3: xiaoguo3

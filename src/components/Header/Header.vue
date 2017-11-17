@@ -2,11 +2,11 @@
     <div style="position: relative;width: 100%" class="fxxheader">
         <el-menu :default-active="activeIndex"
                  class="el-menu"
+                 :style="note"
                  mode="horizontal"
                  @select="handleSelect"
-                 background-color="#00aaff"
                  text-color="#fff"
-                 active-text-color="#ffd04b">
+                 active-text-color="#F1FC09">
             <el-menu-item index="3">联系方式</el-menu-item>
             <el-menu-item index="2">产品中心</el-menu-item>
             <el-menu-item index="1">首页</el-menu-item>
@@ -26,7 +26,10 @@
     export default {
         data() {
             return {
-                activeIndex: '1'
+                activeIndex: '1',
+                note: {
+                    backgroundImage: "url(" + require("../../assets/images/fxxbackgroundImage.jpg") + ")"
+                }
             };
         },
         methods: {
@@ -51,5 +54,14 @@
     .fxxheader .el-menu--horizontal .el-menu-item {
         float: right;
         font-size: 1em;
+    }
+
+    .is-active {
+        background-color: #00CDAC !important;
+        /*color: white;*/
+    }
+
+    li.el-menu-item:hover {
+        background-color: #00CDAC !important;
     }
 </style>
