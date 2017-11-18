@@ -19,7 +19,12 @@
         methods: {
             reloadRouter(){
                 if (navigator.platform.indexOf('Mac') !== -1 || navigator.platform.indexOf('Win') !== -1) {
-                    this.$router.replace({name: 'dkindex'});
+                    if (window.innerWidth < 1000) {
+                        this.$router.replace({name: 'mbindex'});
+                    }
+                    else {
+                        this.$router.replace({name: 'dkindex'});
+                    }
                 }
                 else {
                     this.$router.replace({name: 'mbindex'});

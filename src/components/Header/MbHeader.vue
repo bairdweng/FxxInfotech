@@ -8,6 +8,13 @@
     </div>
 </template>
 <style>
+    .vux-tab .vux-tab-item.vux-tab-selected {
+        color: #00aaff !important;
+    }
+
+    .vux-tab-ink-bar {
+        background-color: #00aaff !important;
+    }
 </style>
 <script>
     import {Tab, TabItem} from 'vux'
