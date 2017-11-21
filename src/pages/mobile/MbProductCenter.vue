@@ -5,25 +5,19 @@
                 <div slot="header" class="clearfix">
                     <span>主营业务</span>
                 </div>
-                <li style="color: gray">
-                    微信公众账号开发。
-                </li>
+                <li style="color: gray">计算机零配件零售。</li>
                 <br/>
-                <li style="color: gray">
-                    微信小程序开发。
-                </li>
+                <li style="color: gray">电子产品零售。</li>
                 <br/>
-                <li style="color: gray">
-                    web网页/后台开发。
-                </li>
-                <br/>
-                <li style="color: gray">
-                    H5游戏/手游开发。
-                </li>
-                <br/>
-                <li style="color: gray">
-                    提供互联网周边产品的技术支持。
-                </li>
+                <!--<li style="color: gray">微信公众账号开发。</li>-->
+                <!--<br/>-->
+                <!--<li style="color: gray"> 微信小程序开发。</li>-->
+                <!--<br/>-->
+                <!--<li style="color: gray">web网页/后台开发。</li>-->
+                <!--<br/>-->
+                <!--<li style="color: gray"> H5游戏/手游开发。</li>-->
+                <!--<br/>-->
+                <!--<li style="color: gray">提供互联网周边产品的技术支持。</li>-->
             </el-card>
             <el-card class="cardStyle">
                 <div slot="header" class="clearfix">
